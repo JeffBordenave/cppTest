@@ -3,7 +3,7 @@
 //2. Create the Color enumeration :
 //With colors such as red, green, blue, yellow, cyan, magenta
 
-enum Color 
+enum Color
 {
 	Red,
 	Green,
@@ -11,5 +11,5 @@ enum Color
 	Yellow,
 	Cyan,
 	Magenta,
-	Default
+	DefColor
 };

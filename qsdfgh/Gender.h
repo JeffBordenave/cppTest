@@ -4,5 +4,5 @@ enum Gender {
 	Man,
 	Woman,
 	NonBinary,
-	Def
+	DefGender
 };

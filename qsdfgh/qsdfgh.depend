@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1650636439 source:c:\users\geoff\onedrive\bureau\cpptest\qsdfgh\car.cpp
+	"Car.h"
+	<iostream>
+	<string>
+
+1650635664 c:\users\geoff\onedrive\bureau\cpptest\qsdfgh\car.h
+	<iostream>
+	<string>
+	"Color.h"
+
+1650636423 c:\users\geoff\onedrive\bureau\cpptest\qsdfgh\color.h
+
+1650636096 source:c:\users\geoff\onedrive\bureau\cpptest\qsdfgh\main.cpp
+	<iostream>
+	"Car.h"
+	"Gender.h"
+	"Person.h"
+	"Color.h"
+
+1650636429 c:\users\geoff\onedrive\bureau\cpptest\qsdfgh\gender.h
+
+1650635489 c:\users\geoff\onedrive\bureau\cpptest\qsdfgh\person.h
+	<iostream>
+	<string>
+	"Car.h"
+	"Color.h"
+	"Gender.h"
+
+1650636434 source:c:\users\geoff\onedrive\bureau\cpptest\qsdfgh\person.cpp
+	"Person.h"
+	<iostream>
+

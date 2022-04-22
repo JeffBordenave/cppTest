@@ -1,11 +1,11 @@
 #include "Person.h"
 #include <iostream>
 
-Person::Person() 
+Person::Person()
 {
 	mFirstName = "Default";
 	mLastName = "Default";
-	mGender = Gender::Default;
+	mGender = Gender::DefGender;
 	mDayOfBirth = 0;
 	mMonthOfBirth = 0;
 	mYearOfBirth = 0;
@@ -13,13 +13,13 @@ Person::Person()
 	mHasCar = false;
 }
 
-Person::Person(std::string firstName, std::string lastName) 
+Person::Person(std::string firstName, std::string lastName)
 {
 	mFirstName = firstName;
 	mLastName = lastName;
 }
 
-Person::Person(std::string firstName, std::string lastName, Gender gender) 
+Person::Person(std::string firstName, std::string lastName, Gender gender)
 {
 	mFirstName = firstName;
 	mLastName = lastName;
@@ -67,7 +67,7 @@ bool Person::CheckHasCar() { return mHasCar; }
 Car Person::GetCar() { return mCar; }
 int Person::GetMoney() { return mMoney; }
 
-void Person::IntroduceSelf() 
+void Person::IntroduceSelf()
 {
 	std::cout << mFirstName << " " << mLastName;
 	std::cout << " was born on " << mMonthOfBirth << " " << mDayOfBirth << ", " << mYearOfBirth;
@@ -77,9 +77,9 @@ void Person::IntroduceSelf()
 	std::cout << " and has " << mCar.GetBrand() << " " << mCar.GetModel() << " (" << mCar.GetPlate() << ")" << std::endl;
 }
 
-void Person::BuyCar(Person seller, Car car, float price) 
+void Person::BuyCar(Person seller, Car car, float price)
 {
-	if (!seller.CheckHasCar()) 
+	if (!seller.CheckHasCar())
 	{
 		cout << seller.GetName() << " has no car" << std::endl;
 		return;
@@ -110,7 +110,7 @@ void Person::SellCar(float price)
 	mHasCar = false;
 }
 
-void Person::DriveCar(float distanceInKm) 
+void Person::DriveCar(float distanceInKm)
 {
 	mCar.Roll(distanceInKm);
 }

@@ -4,18 +4,18 @@
 
 using namespace std;
 
-Car::Car() 
+Car::Car()
 {
 	mBrand = "Default";
 	mModel = "Default";
-	mColor = Color::Default;
+	mColor = Color::DefColor;
 	mLicensePlate = "Default";
 	mYear = 0;
 	mMileage = 0;
 	mCostValue = 0;
 }
 
-Car::Car(string brand, string model, Color color, string licensePlate, int year, int mileage, int costValue) 
+Car::Car(string brand, string model, Color color, string licensePlate, int year, int mileage, int costValue)
 {
 	mBrand = brand;
 	mModel = model;
@@ -33,7 +33,7 @@ string Car::GetBrand() { return mBrand; }
 string Car::GetModel() { return mModel; }
 string Car::GetPlate() { return mLicensePlate; }
 
-void Car::Roll(int distanceInKm) 
+void Car::Roll(int distanceInKm)
 {
 	mMileage += distanceInKm;
 
