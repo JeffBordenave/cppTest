@@ -32,6 +32,7 @@ Car::~Car() {}
 string Car::GetBrand() { return mBrand; }
 string Car::GetModel() { return mModel; }
 string Car::GetPlate() { return mLicensePlate; }
+int Car::GetPriceValue() { return mCostValue; }
 
 void Car::Roll(int distanceInKm)
 {

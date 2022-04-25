@@ -37,7 +37,7 @@ public :
 	int GetMoney();
 
 	void IntroduceSelf();
-	void BuyCar(Person seller, Car car, float price);
+	void BuyCar(Person seller, Car car);
 	void SellCar(float price);
 	void DriveCar(float distanceInKm);
 	void PaintCar(Color color);

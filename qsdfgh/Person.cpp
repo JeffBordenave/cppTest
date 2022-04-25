@@ -77,15 +77,17 @@ void Person::IntroduceSelf()
 	std::cout << " and has " << mCar.GetBrand() << " " << mCar.GetModel() << " (" << mCar.GetPlate() << ")" << std::endl;
 }
 
-void Person::BuyCar(Person seller, Car car, float price)
+void Person::BuyCar(Person seller, Car car)
 {
+	int price = 0;
 	if (!seller.CheckHasCar())
 	{
 		cout << seller.GetName() << " has no car" << std::endl;
 		return;
 	}
-	else if (price > mMoney)
+	else if (car.GetPriceValue() > mMoney)
 	{
+		price = car.GetPriceValue();
 		cout << "The price of the car is too high" << std::endl;
 		return;
 	}

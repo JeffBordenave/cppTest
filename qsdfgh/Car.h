@@ -35,6 +35,7 @@ public :
 	string GetBrand();
 	string GetModel();
 	string GetPlate();
+	int GetPriceValue();
 
 	void Roll(int distanceInKm);
 	void ChangeColor(Color newColor);

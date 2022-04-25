@@ -1,1 +1,5 @@
-﻿  qsdfgh.vcxproj -> C:\Users\geoff\OneDrive\Bureau\cppTest\Debug\qsdfgh.exe
+﻿  Dealership.cpp
+C:\Users\geoff\OneDrive\Bureau\cppTest\qsdfgh\Dealership.cpp(73,72): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  Main.cpp
+  Génération de code en cours...
+  qsdfgh.vcxproj -> C:\Users\geoff\OneDrive\Bureau\cppTest\Debug\qsdfgh.exe
