@@ -1,7 +1,1 @@
-﻿  Car.cpp
-  Person.cpp
-C:\Users\geoff\OneDrive\Bureau\cppTest\qsdfgh\Person.cpp(68,33): warning C4244: 'return' : conversion de 'float' en 'int', perte possible de données
-C:\Users\geoff\OneDrive\Bureau\cppTest\qsdfgh\Person.cpp(115,12): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-  Main.cpp
-  Génération de code en cours...
-  qsdfgh.vcxproj -> C:\Users\geoff\OneDrive\Bureau\cppTest\Debug\qsdfgh.exe
+﻿  qsdfgh.vcxproj -> C:\Users\geoff\OneDrive\Bureau\cppTest\Debug\qsdfgh.exe
