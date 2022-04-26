@@ -129,7 +129,8 @@ void Person::PaintCar(Color color)
 void Person::BuyCarFromDealership(Car car)
 {
 	mMoney -= car.GetPriceValue();
-	mCar = car;
+	Car* ptr = &mCar;
+	*ptr = car;
 
 	mHasCar = true;
 }

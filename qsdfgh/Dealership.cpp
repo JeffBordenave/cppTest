@@ -190,10 +190,8 @@ void Dealership::SellCarToCustomer(Person customer)
 		cout << "The customer doesn't have enough money to buy the car" << endl;
 		return;
 	}
-	else
-	{
-		customer.BuyCarFromDealership(mCarsOwned[carChosen]);
-	}
+
+	customer.BuyCarFromDealership(mCarsOwned[carChosen]);	
 
 	mMoney += mCarsOwned[carChosen].GetPriceValue();
 
@@ -230,6 +228,7 @@ void Dealership::BuyCarFromCustomer(Person customer)
 
 void Dealership::Menu() 
 {
+	cout << "===============================" << endl;
 	cout << "You have " << mMoney << " euros" << endl;
 	int actionChosen = 0;
 	cout << "Choose an action :" << endl;
@@ -256,9 +255,8 @@ void Dealership::Menu()
 	case 3:
 		for (size_t i = 0; i < mCustomers.size(); i++)
 		{
-			cout << i + 1 << ". " << mCustomers[i].GetName() << " has " << mCustomers[i].GetMoney() << " euros" << endl;
-			if (mCustomers[i].CheckHasCar())
-				cout << " and has a " << mCustomers[i].GetCar().GetBrand() << endl;
+			cout << i + 1 << ". "; 
+			mCustomers[i].IntroduceSelf();
 		}
 		Menu();
 		break;
@@ -278,9 +276,8 @@ void Dealership::Menu()
 		{
 			for (size_t i = 0; i < mCustomers.size(); i++)
 			{
-				cout << i + 1 << ". " << mCustomers[i].GetName() << " has " << mCustomers[i].GetMoney() << " euros" << endl;
-				if (mCustomers[i].CheckHasCar())
-					cout << " and has a " << mCustomers[i].GetCar().GetBrand() << endl;
+				cout << i + 1 << ". ";
+				mCustomers[i].IntroduceSelf();
 			}
 			cin >> customer;
 		} while (customer <= 0 || (unsigned)customer > mCustomers.size());
@@ -296,9 +293,8 @@ void Dealership::Menu()
 		{
 			for (size_t i = 0; i < mCustomers.size(); i++)
 			{
-				cout << i + 1 << ". " << mCustomers[i].GetName() << " has " << mCustomers[i].GetMoney() << " euros" << endl;
-				if (mCustomers[i].CheckHasCar())
-					cout << " and has a " << mCustomers[i].GetCar().GetBrand() << endl;
+				cout << i + 1 << ". ";
+				mCustomers[i].IntroduceSelf();
 			}
 			cin >> customerChoice;
 		} while (customerChoice < 0 || (unsigned)customerChoice > mCustomers.size());
