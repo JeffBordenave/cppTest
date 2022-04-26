@@ -18,5 +18,5 @@ int main()
 
     Dealership dealership = Dealership();
 
-    dealership.CreatePerson();
+    dealership.Menu();
 }

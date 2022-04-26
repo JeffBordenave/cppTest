@@ -4,6 +4,7 @@
 #include "Car.h"
 #include "Person.h"
 #include <vector>
+#include "Person.h"
 
 using namespace std;
 
@@ -20,9 +21,13 @@ public:
     ~Dealership();
 
     vector<Person> GetCustomers();
+    vector<Car> GetCarsOwned();
+    int GetMoney();
 
     void CreatePerson();
     void CreateCar();
-    void SellCarToCustomer();
-    void BuyCarFromCustomer();
+    void SellCarToCustomer(Person customer);
+    void BuyCarFromCustomer(Person customer);
+
+    void Menu();
 };

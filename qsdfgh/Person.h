@@ -19,7 +19,7 @@ private :
 	int mDayOfBirth;
 	int mMonthOfBirth;
 	int mYearOfBirth;
-	float mMoney;
+	int mMoney;
 	bool mHasCar;
 	Car mCar;
 public :
@@ -27,8 +27,8 @@ public :
 	Person(std::string firstName, std::string lastName);
 	Person(std::string firstName, std::string lastName, Gender gender);
 	Person(std::string firstName, std::string lastName, Gender gender, int dayOfBirth, int monthOfBirth, int yearOfBirth);
-	Person(std::string firstName, std::string lastName, Gender gender, int dayOfBirth, int monthOfBirth, int yearOfBirth, float money);
-	Person(std::string firstName, std::string lastName, Gender gender, int dayOfBirth, int monthOfBirth, int yearOfBirth, float money, Car car);
+	Person(std::string firstName, std::string lastName, Gender gender, int dayOfBirth, int monthOfBirth, int yearOfBirth, int money);
+	Person(std::string firstName, std::string lastName, Gender gender, int dayOfBirth, int monthOfBirth, int yearOfBirth, int money, Car car);
 	~Person();
 
 	string GetName();
@@ -38,7 +38,9 @@ public :
 
 	void IntroduceSelf();
 	void BuyCar(Person seller, Car car);
-	void SellCar(float price);
-	void DriveCar(float distanceInKm);
+	void SellCar(int price);
+	void DriveCar(int distanceInKm);
 	void PaintCar(Color color);
+
+	void BuyCarFromDealership(Car car);
 };

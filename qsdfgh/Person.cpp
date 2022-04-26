@@ -36,7 +36,7 @@ Person::Person(std::string firstName, std::string lastName, Gender gender, int d
 	mYearOfBirth = yearOfBirth;
 }
 
-Person::Person(std::string firstName, std::string lastName, Gender gender, int dayOfBirth, int monthOfBirth, int yearOfBirth, float money)
+Person::Person(std::string firstName, std::string lastName, Gender gender, int dayOfBirth, int monthOfBirth, int yearOfBirth, int money)
 {
 	mFirstName = firstName;
 	mLastName = lastName;
@@ -47,7 +47,7 @@ Person::Person(std::string firstName, std::string lastName, Gender gender, int d
 	mMoney = money;
 }
 
-Person::Person(std::string firstName, std::string lastName, Gender gender, int dayOfBirth, int monthOfBirth, int yearOfBirth, float money, Car car)
+Person::Person(std::string firstName, std::string lastName, Gender gender, int dayOfBirth, int monthOfBirth, int yearOfBirth, int money, Car car)
 {
 	mFirstName = firstName;
 	mLastName = lastName;
@@ -74,7 +74,11 @@ void Person::IntroduceSelf()
 	std::cout << " and is a " << mGender << std::endl;
 
 	std::cout << mFirstName << " has " << mMoney << " euros";
-	std::cout << " and has " << mCar.GetBrand() << " " << mCar.GetModel() << " (" << mCar.GetPlate() << ")" << std::endl;
+
+	if (mHasCar)
+		std::cout << " and has " << mCar.GetBrand() << " " << mCar.GetModel() << " (" << mCar.GetPlate() << ")" << std::endl;
+	else
+		std::cout << " ans has no car" << std::endl;
 }
 
 void Person::BuyCar(Person seller, Car car)
@@ -106,13 +110,13 @@ void Person::BuyCar(Person seller, Car car)
 	cout << mFirstName << " has now " << mMoney << " euros" << std::endl;
 }
 
-void Person::SellCar(float price)
+void Person::SellCar(int price)
 {
 	mMoney += price;
 	mHasCar = false;
 }
 
-void Person::DriveCar(float distanceInKm)
+void Person::DriveCar(int distanceInKm)
 {
 	mCar.Roll(distanceInKm);
 }
@@ -120,4 +124,12 @@ void Person::DriveCar(float distanceInKm)
 void Person::PaintCar(Color color)
 {
 	mCar.ChangeColor(color);
+}
+
+void Person::BuyCarFromDealership(Car car)
+{
+	mMoney -= car.GetPriceValue();
+	mCar = car;
+
+	mHasCar = true;
 }
